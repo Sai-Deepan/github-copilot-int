@@ -205,6 +205,27 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex: 1;
+}
+
+/* Delete button next to each participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #9e1b1b;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+.participant-delete:hover {
+  background: rgba(158,27,27,0.08);
+  color: #c62828;
+}
+.participant-delete:disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 /* Subtle scrollbar styling for modern browsers */
