@@ -63,6 +63,8 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  /* keep a consistent min-height so layout is tidy */
+  min-height: 130px;
 }
 
 .activity-card h4 {
@@ -141,4 +143,76 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+/* Participants section */
+.participants {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants h5 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: #1a237e;
+  font-weight: 700;
+}
+
+/* Compact vertical list with avatars */
+.participants-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 120px; /* constrain long lists */
+  overflow: auto;
+}
+
+/* Each participant row */
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border: 1px solid #f0f0ff;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Small circular avatar with initials */
+.participant-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #e8eaf6;
+  color: #1a237e;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 2px rgba(26,35,126,0.08);
+}
+
+/* Email text overflow handling */
+.participant-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Subtle scrollbar styling for modern browsers */
+.participants-list::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.participants-list::-webkit-scrollbar-thumb {
+  background: #d7d7ff;
+  border-radius: 8px;
 }
