@@ -15,10 +15,27 @@
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
-        <div id="activities-list">
+        <div id="activities-list" aria-live="polite">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
+
+        <!-- Template used by the frontend to render an activity card with participants -->
+        <template id="activity-template">
+          <div class="activity-card">
+            <h4 class="activity-title"><!-- title --></h4>
+            <p class="activity-desc"><!-- description --></p>
+            <p class="activity-schedule"><strong>Schedule:</strong> <!-- schedule --></p>
+            <p class="activity-capacity"><strong>Capacity:</strong> <!-- capacity --></p>
+
+            <div class="participants">
+              <h5>Participants</h5>
+              <ul class="participants-list">
+                <!-- JS will append <li class="participant-item">email</li> items here -->
+              </ul>
+            </div>
+          </div>
+        </template>
       </section>
 
       <section id="signup-container">
